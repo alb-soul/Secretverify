@@ -2,14 +2,16 @@
 
 **Interactive Secret / Token Validator** — companion tool untuk [secrethunter](https://github.com/trendmicro/secrethunter). Jalankan sekali, pilih layanan, tempel API key/token, dan script akan mengecek validitasnya secara langsung ke endpoint resmi (atau validasi format jika butuh konteks tambahan).
 
-Mendukung **157 layanan** — AWS, Google, GitHub, GitLab, Stripe, Telegram, Twilio, Discord, Slack, dan lainnya — dengan menu interaktif, pencarian layanan (`/kata`), laporan valid/invalid, dan auto-jump.
+Mendukung **159 layanan** — AWS, Google, GitHub, GitLab, Stripe, Telegram, Twilio, Discord, Slack, Azure Storage, MongoDB URI, dan lainnya — dengan menu interaktif, pencarian layanan (`/kata`), laporan valid/invalid, dan auto-jump.
 
 ## Fitur
 
-- ✅ **157 layanan** dalam satu tool
-- 🔎 **Pencarian** ketik `/stripe`, `/github`, `/aws`, dst. untuk langsung menemukan nomor layanan
+- ✅ **159 layanan** dalam satu tool
+- 🔎 **Pencarian** ketik `/stripe`, `/github`, `/aws`, `/mongo`, dst. untuk langsung menemukan nomor layanan
 - 🚀 **Auto-jump** setelah pencarian: langsung tanya "Langsung cek #17?"
 - 🧪 **Verifikasi nyata** — cek HTTP ke endpoint resmi dengan key/token Anda
+- 🗄️ **MongoDB URI** — TCP + isMaster + SCRAM auth (butuh reach host di URI; IP internal hanya bisa dari jaringan target)
+- ☁️ **Azure Storage Account Key** — signed SharedKey request (list containers, read-only)
 - 🎯 **Format-check** untuk layanan yang butuh context tambahan (client_id, tenant, dsb.)
 - 📋 **Session log** — simpan hasil validasi ke file (tombol `S`)
 - 🧹 **Amankan** — temp file pakai `mktemp`, auto-cleanup saat keluar
@@ -21,6 +23,7 @@ Mendukung **157 layanan** — AWS, Google, GitHub, GitLab, Stripe, Telegram, Twi
 
 - `bash` (Linux/macOS, Git Bash di Windows, atau WSL)
 - `curl` — cek dengan `curl --version`
+- `python3` + `openssl` — untuk MongoDB URI (#159) dan Azure Storage Key (#158)
 
 ### Linux / macOS / WSL / Git Bash — install otomatis
 
