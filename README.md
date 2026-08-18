@@ -1,6 +1,6 @@
 # secretverify
 
-**Interactive Secret / Token Validator** — companion tool untuk [secrethunter](https://github.com/trendmicro/secrethunter). Jalankan sekali, pilih layanan, tempel API key/token, dan script akan mengecek validitasnya secara langsung ke endpoint resmi (atau validasi format jika butuh konteks tambahan).
+**Interactive Secret / Token Validator**. Jalankan sekali, pilih layanan, tempel API key/token, dan script akan mengecek validitasnya secara langsung ke endpoint resmi (atau validasi format jika butuh konteks tambahan).
 
 Mendukung **159 layanan** — AWS, Google, GitHub, GitLab, Stripe, Telegram, Twilio, Discord, Slack, Azure Storage, MongoDB URI, dan lainnya — dengan menu interaktif, pencarian layanan (`/kata`), laporan valid/invalid, dan auto-jump.
 
